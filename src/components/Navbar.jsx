@@ -33,7 +33,7 @@ const Navbar = () => {
           <div className="flex items-center gap-2 group cursor-pointer">
             <Code2 className="h-6 w-6 text-cyan-500 group-hover:text-cyan-400 transition-colors" />
             <span className="font-bold text-xl text-slate-100 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500">
-              CF Explorer
+              CF Manager
             </span>
           </div>
           

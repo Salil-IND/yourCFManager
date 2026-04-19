@@ -21,12 +21,12 @@ const Sidebar = () => {
   } = useFilterStore();
 
   const handleMinRatingChange = (e) => {
-    const val = parseInt(e.target.value) || 0;
+    const val = e.target.value === '' ? '' : Number(e.target.value);
     setRatingRange([val, ratingRange[1]]);
   };
 
   const handleMaxRatingChange = (e) => {
-    const val = parseInt(e.target.value) || 4000;
+    const val = e.target.value === '' ? '' : Number(e.target.value);
     setRatingRange([ratingRange[0], val]);
   };
 

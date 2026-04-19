@@ -54,7 +54,9 @@ const ProblemTable = ({ onlyBookmarked = false }) => {
       }
       // Rating Range (Assume unrated problems have rating 0)
       const r = prob.rating || 0;
-      if (r < ratingRange[0] || r > ratingRange[1]) {
+      const minR = ratingRange[0] === '' ? 0 : Number(ratingRange[0]);
+      const maxR = ratingRange[1] === '' ? 4000 : Number(ratingRange[1]);
+      if (r < minR || r > maxR) {
         return false;
       }
       // Tags (must contain ALL selected tags)
